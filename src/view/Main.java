@@ -11,6 +11,7 @@ public class Main extends PApplet {
 	}
 	
 	 Logic logic;
+	 
 	
 	public void settings() {
 		size(800,800);
@@ -21,6 +22,7 @@ public class Main extends PApplet {
 	}
 	
 	public void draw() {
+		
 		logic.paint();
 	}
 	
