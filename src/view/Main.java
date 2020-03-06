@@ -10,20 +10,31 @@ public class Main extends PApplet {
 		PApplet.main(Main.class.getName());
 	}
 	
-	 Logic logic;
-	 
+	 StartScreen startS;
+	 int screens;
 	
 	public void settings() {
 		size(800,800);
+		
 	}
 	
 	public void setup() {
-		logic = new Logic(this);
+		startS = new StartScreen(this);
+		screens= 0;
 	}
 	
 	public void draw() {
+		switch(screens) {
+		case 0:
+			startS.paint();
+			break;
+		case 1:
+			
+			break;
+		case 2:
+			break;
+		}
 		
-		logic.paint();
 	}
 	
 	public void keyPressed() {
