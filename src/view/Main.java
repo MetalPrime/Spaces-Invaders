@@ -67,7 +67,7 @@ public class Main extends PApplet {
 			}
 			break;
 		case 1:
-			
+			GameS.pressed();
 			break;
 		case 2:
 			break;

@@ -14,7 +14,7 @@ public class Logic {
 
 	public Logic(PApplet app) {
 		this.app = app;
-		 hero = new Hero(app, app.width/2, app.height*1/5, 100, 10, 0);
+		 hero = new Hero(app, app.width/2, app.height*4/5, 100, 10, 0);
 	}
 	
 	public void paint() {
@@ -26,6 +26,10 @@ public class Logic {
 		// TODO Auto-generated method stub
 		hero.move();
 		
+	}
+	
+	public void pressed() {
+		hero.shot();
 	}
 	
 }

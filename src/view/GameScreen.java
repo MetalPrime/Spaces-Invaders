@@ -24,6 +24,10 @@ public class GameScreen {
 	public void move() {
 		logic.move();
 	}
+	
+	public void pressed() {
+		logic.pressed();
+	}
 
 
 }

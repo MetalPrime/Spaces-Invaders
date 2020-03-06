@@ -19,8 +19,11 @@ public class Hero extends Characters {
 		this.size = size;
 		this.movX = movX;
 		this.movY = movY;
-
-}
+		
+		
+		bullets = new ArrayList <Bullets>(5);
+		
+	}
 
 	@Override
 	public void paint() {
@@ -28,6 +31,10 @@ public class Hero extends Characters {
 		app.fill(255,0,0);
 		app.rect(x,y,size,size);
 		
+		for (int i=0; i<bullets.size(); i++) {
+			bullets.get(i).paint();
+			
+		}
 	}
 
 	@Override
@@ -41,6 +48,13 @@ public class Hero extends Characters {
 		if(app.keyCode == PConstants.LEFT) {
 			x-=movX;
 		}
+	}
+	
+	public void shot() {
+		
+			bullets.add(new Bullets(app, x, y, 20));
+			
+		
 	}
 	
 }
