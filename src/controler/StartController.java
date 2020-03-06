@@ -15,13 +15,17 @@ public StartController(PApplet app) {
 	this.app = app;
 }	
 
-public void changeScreen(int posX,int posY,int sizeX,int sizeY) {
+public int changeScreen(int posX,int posY,int sizeX,int sizeY) {
 	this.posX = posX;
 	this.posY = posY;
 	this.sizeX = sizeX;
 	this.sizeY = sizeY;
+	int valor=0;
 	if(app.mouseX>posX && app.mouseX<posX+sizeX && 
-			app.mouseX>posX && app.mouseX<posX+sizeX )
+			app.mouseX>posY && app.mouseX<posY+sizeY ) {
+		
+	}
+	return valor;
 }
 
 }

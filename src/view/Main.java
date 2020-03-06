@@ -11,6 +11,8 @@ public class Main extends PApplet {
 	}
 	
 	 StartScreen startS;
+	 GameScreen GameS;
+	 OverScreen OverS;
 	 int screens;
 	
 	public void settings() {
@@ -20,6 +22,8 @@ public class Main extends PApplet {
 	
 	public void setup() {
 		startS = new StartScreen(this);
+		GameS = new GameScreen(this,this);
+		OverS = new OverScreen(this);
 		screens= 0;
 	}
 	
@@ -27,11 +31,13 @@ public class Main extends PApplet {
 		switch(screens) {
 		case 0:
 			startS.paint();
+			//System.out.println(screens);
 			break;
 		case 1:
-			
+			GameS.paint();
 			break;
 		case 2:
+			OverS.paint();
 			break;
 		}
 		
@@ -42,6 +48,19 @@ public class Main extends PApplet {
 	}
 	
 	public void mousePressed() {
-		
+		switch(screens) {
+		case 0:
+			if(mouseX>startS.getPosX() && mouseX<startS.getPosX()+startS.getSizeX() && 
+				mouseY>startS.getPosY() && mouseY<startS.getPosY()+startS.getSizeY() ) {
+				screens = 1;
+				System.out.println(screens);
+			}
+			break;
+		case 1:
+			
+			break;
+		case 2:
+			break;
+		}
 	}
 }
