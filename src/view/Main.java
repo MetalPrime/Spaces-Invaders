@@ -47,7 +47,7 @@ public class Main extends PApplet {
 		
 	}
 	
-	public void mousePressed() {
+	public void mouseClicked() {
 		switch(screens) {
 		case 0:
 			if(mouseX>startS.getPosX() && mouseX<startS.getPosX()+startS.getSizeX() && 
