@@ -44,7 +44,17 @@ public class Main extends PApplet {
 	}
 	
 	public void keyPressed() {
+		switch(screens) {
+		case 0:
 		
+			break;
+		case 1:
+			GameS.move();
+			break;
+		case 2:
+			
+			break;
+		}
 	}
 	
 	public void mouseClicked() {

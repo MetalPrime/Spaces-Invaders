@@ -21,5 +21,11 @@ public class Logic {
 		hero.paint();
 		
 	}
+
+	public void move() {
+		// TODO Auto-generated method stub
+		hero.move();
+		
+	}
 	
 }

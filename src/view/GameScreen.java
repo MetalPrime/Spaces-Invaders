@@ -18,6 +18,12 @@ public class GameScreen {
 		// TODO Auto-generated method stub
 		app.background(0);
 		logic.paint();
+		
 	}
+	
+	public void move() {
+		logic.move();
+	}
+
 
 }

@@ -32,11 +32,15 @@ public class Hero extends Characters {
 
 	@Override
 	public void move() {
+		
 		// TODO Auto-generated method stub
-		if(app.key == PConstants.RIGHT) {
-			
+		if(app.keyCode == PConstants.RIGHT ) {
+			x+=movX;
+			System.out.println("gf");
 		}
-		if() {}
+		if(app.keyCode == PConstants.LEFT) {
+			x-=movX;
+		}
 	}
 	
 }
