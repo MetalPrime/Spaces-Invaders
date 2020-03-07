@@ -24,10 +24,10 @@ public class Bullets {
 		posY-=10;
 	}
 	
-	public boolean hits(Invaders invader,float EposX, float EposY) {
+	public boolean hits(float EposX, float EposY) {
 		float d=PApplet.dist(posX, posY, EposX, EposY);
 		
-		if(d<40) {
+		if(d<70) {
 			return true;
 			
 		} else {

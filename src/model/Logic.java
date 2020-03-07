@@ -28,10 +28,9 @@ public class Logic {
 		for (int i=0; i<bullets.size(); i++) {
 			bullets.get(i).paint();
 			 for(int j= 0; j< is.length;j++) {
-					if(bullets.get(i).hits(is[i],is[i].getX(),is[i].getY())) {
-				System.out.println("fdfda");
-				
-				is[j].setX(-50);
+					if(bullets.get(i).hits(is[j].getX(),is[j].getY())) {
+				System.out.println(	is.length);
+				is[j].setSize(0);
 					}
 					
 			 }
