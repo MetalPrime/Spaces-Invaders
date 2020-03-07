@@ -8,7 +8,7 @@ import view.Characters;
 
 public class Hero extends Characters {
 		
-	private ArrayList<Bullets> bullets;
+	
 	
 	public Hero(PApplet app, float x, float y, int size, int movX, int movY) {
 		super(app, x, y, size, movX, movY);
@@ -21,7 +21,7 @@ public class Hero extends Characters {
 		this.movY = movY;
 		
 		
-		bullets = new ArrayList <Bullets>(5);
+		
 		
 	}
 
@@ -30,11 +30,7 @@ public class Hero extends Characters {
 		// TODO Auto-generated method stub
 		app.fill(255,0,0);
 		app.rect(x,y,size,size);
-		
-		for (int i=0; i<bullets.size(); i++) {
-			bullets.get(i).paint();
-			
-		}
+	
 	}
 
 	@Override
@@ -50,12 +46,7 @@ public class Hero extends Characters {
 		}
 	}
 	
-	public void shot() {
-		
-			bullets.add(new Bullets(app, x, y, 20));
-			
-		
-	}
+
 	
 }
 

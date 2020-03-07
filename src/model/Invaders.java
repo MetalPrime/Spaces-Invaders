@@ -9,8 +9,8 @@ public class Invaders extends Characters {
 		super(app, x, y, size, movX, movY);
 		// TODO Auto-generated constructor stub
 		this.app = app;
-		this.x = app.random(0,800);
-		this.y = -10;
+		this.x = x;
+		this.y = y;
 		this.size = size;
 		this.movX = movX;
 		this.movY = movY;
@@ -27,7 +27,16 @@ public class Invaders extends Characters {
 	@Override
 	public void move() {
 		// TODO Auto-generated method stub
-		y+=movY;
+		x+=movX;
+	
+		if(x<=0 || x>=800) {
+			movX*=-1;
+			
+			y+=movY;
+		}
+		
+		
+		
 	}
 
 }
